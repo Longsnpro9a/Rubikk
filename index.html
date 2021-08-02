@@ -1,0 +1,1381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CT_Rubik 3x3</title>
+    <link rel="stylesheet" href="./assest/css/style.css">
+    <link rel="stylesheet" href="./assest/css/media.css">
+</head>
+<body>
+    <div class="img-background__img">
+        <p>Rubik</p>
+    </div>
+    <main class="main">
+
+        <!-- Start: Header -->
+
+        <header id="header">
+
+        <!-- Start: Navbar -->
+
+        <div class="navbar">
+            <ul class="navbar__list">
+                <li class="navbar__item">
+                    <a href="#">Home</a>
+                    <ul class="subnav">
+                        <li><a href="#Basic">Cách xoay cơ bản</a></li>
+                        <li><a href="#Advanced">Cách xoay nâng cao</a></li>
+                    </ul>
+                </li>
+                <li class="navbar__item">
+                    <a href="#Cross">Cross</a>
+                    <ul class="subnav">
+                        <li><a href="#Cross__Opposition">Các mặt đối nhau</a></li>
+                        <li><a href="#Cross__Basic">Công thức cơ bản</a></li>
+                    </ul>
+                </li>
+                <li class="navbar__item">
+                    <a href="#F2L">F2L</a>
+                    <ul class="subnav">
+                        <li><a href="#F2L__Basic">Cơ bản</a></li>
+                        <li><a href="#F2L__F-of-U">Trước mặt tầng đầu</a></li>
+                        <li><a href="#F2L__R-of-U">Bên phải tầng đầu</a></li>
+                        <li><a href="#F2L__U-of-U">Bên trên tầng đầu</a></li>
+                        <li><a href="#F2L__F-of-u">Trước mặt 2 tầng trên</a></li>
+                        <li><a href="#F2L__R-of-u">Bên phải 2 tầng trên</a></li>
+                        <li><a href="#F2L__U-of-u">Bên trên 2 tầng trên</a></li>
+                        <li><a href="#F2L__F-of-D">Trước mặt tầng đáy</a></li>
+                        <li><a href="#F2L__R-of-D">Bên phải tầng đấy</a></li>
+                        <li><a href="#F2L__D-of-D">Tầng đáy</a></li>
+                    </ul>
+                </li>
+                <li class="navbar__item">
+                    <a href="#OLL">OLL</a>
+                    <ul class="subnav">
+                        <li><a href="#OLL__Basic">Bốn cạnh vàng</a></li>
+                        <li><a href="#OLL__none">Không có cạnh vàng</a></li>
+                        <li><a href="#OLL__P">Chữ P</a></li>
+                        <li><a href="#OLL__W">Chữ W</a></li>
+                        <li><a href="#OLL__C">Chữ C</a></li>
+                        <li><a href="#OLL__T">Chữ T</a></li>
+                        <li><a href="#OLL__I">Chữ I</a></li>
+                        <li><a href="#OLL__small-L">Chữ L nhỏ</a></li>
+                        <li><a href="#OLL__big-L">Chữ L lớn</a></li>
+                        <li><a href="#OLL__Square">Hình vuông</a></li>
+                        <li><a href="#OLL__big-Z">Tia chớp lớn</a></li>
+                        <li><a href="#OLL__small-Z">Tia chớp nhỏ</a></li>
+                        <li><a href="#OLL__fish">Con cá</a></li>
+                        <li><a href="#OLL__Z-unusual">Chữ Z dị dạng</a></li>
+                        <li><a href="#OLL__4-yellow">4 góc vàng</a></li>
+                    </ul>
+                </li>
+                <li class="navbar__item">
+                    <a href="#PLL">PLL</a>
+                    <ul class="subnav">
+                        <li><a href="#PLL__Basic">Hoán vị góc</a></li>
+                        <li><a href="#PLL__Edges">Hoán vị cạnh</a></li>
+                        <li><a href="#PLL__Edges&Corners">Hoán vị cả góc và cạnh</a></li>
+                        <li><a href="#PLL__Cycle-Edges&Corners">Hoán vị chu kỳ cả góc và cạnh</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <!-- End: Navbar -->
+
+        </header>
+        <div class="slide"><img src="/image/Cross/full.jpg" alt=""></div>
+
+        <!-- End: Header -->
+
+        <!-- Start: Container -->
+
+        <div class="container">
+
+            <!-- Start: Home -->
+            <div class="home">
+                <div id="Basic">
+                    <h1 class="text">Cách xoay cơ bản</h1>
+                    <div class="Basic__title">
+                        <ul class="Basic__list">
+                            <li class="Basic__item"><strong>R</strong> (Right): mặt phải</li>
+                            <li class="Basic__item"><strong>L</strong> (Light): mặt trái</li>
+                            <li class="Basic__item"><strong>U</strong> (Up): mặt trên</li>
+                            <li class="Basic__item"><strong>D</strong> (Down): mặt dưới (đối diện với mặt trên)</li>
+                            <li class="Basic__item"><strong>F</strong> (Front): mặt trước (đối diện với người giải)</li>
+                            <li class="Basic__item"><strong>B</strong> (Back): mặt sau</li>
+                        </ul>
+                        <div class="Basic__img"><img src="/image/Cross/ki_hieu.png" alt=""></div>
+                    </div>
+                    <div class="Basic__content">
+                        <div class="Basic__part">
+                            <span class="Part__text">Một <strong><ins>chữ cái in hoa</ins></strong> được hiểu là xoay 1/4 mặt tương ứng (90°) <strong><ins> theo chiều kim đồng hồ ↻.</ins></strong></span>
+                            <span class="Part__img"><img src="/image/Cross/Thuận.jpg" alt=""></span>
+                        </div>
+                    </div>
+                    <div class="Basic__content">
+                        <div class="Basic__part">
+                            <span class="Part__text">Một <strong><ins>chữ cái in hoa và theo sau nó có dấu nháy đơn</ins> (')</strong> được hiểu là xoay 1/4 mặt tương ứng (90°) <strong><ins> ngược chiều kim đồng hồ ↻.</ins></strong></span>
+                            <span class="Part__img"><img src="/image/Cross/Ngược.jpg" alt=""></span>
+                        </div>
+                    </div>
+                    <div class="Basic__content">
+                        <div class="Basic__part">
+                            <span class="Part__text">Một <strong><ins>chữ cái in hoa có số "2"</ins></strong>được hiểu là xoay 2 lượt đơn = <strong><ins>1/2 mặt tương ướng (180°).</ins></strong></span>
+                            <span class="Part__img"><img src="/image/Cross/2_lần.jpg" alt=""></span>
+                        </div>
+                    </div>
+                    <div class="Basic__content">
+                        <div class="Basic__part">
+                            <span class="Part__text">Ri => R' , Li => L' , Bi => B' , Fi => F' , Di => D' , Fi => F', Ui => U' </span>
+                            <span class="Part__img"><img src="/image/Cross/Quy-uoc-xoay.png" alt=""></span>
+                        </div>
+                    </div>
+                    
+                </div>
+
+                <div id="Advanced">
+                    <h1 class="text">Cách xoay nâng cao</h1>
+                    <div class="Basic__content">
+                        <h2><mark>Xoay 2 tầng cùng lúc</mark></h2>
+                        <div class="Basic__part">
+                            <span class="Part__text">Một chữ cái nhỏ được hiểu là xoay cùng lúc hai tầng, bao gồm một mặt và lớp giữa tương ứng của nó. Lý do chúng ta cần thực hiện những động tác như vậy là vì nó có thể cắt giảm số lần di chuyển của bạn.</span>
+                            <span class="Part__text">Nó cũng được chấp nhận ở hai hình thức, một là sử dụng chữ in hoa + w ở sau, hai là sử dụng chữ cái nhỏ.</span>
+                            <span class="Part__text">Ví dụ: Rw ==> r.</span>
+                            <span class="Part__img"><img src="/image/Cross/2-tầng.jpg" alt=""></span>
+                        </div>
+                    </div>
+                    <div class="Basic__content">
+                        <h2><mark>Xoay toàn bộ khối rubik</mark></h2>
+                        <div class="Basic__part">
+                            <span class="Part__text">Đây không phải lượt xoay thực tế, đơn giản chỉ là bạn định hướng lại cách cầm khối Rubik mà thôi. Việc thực hiện phép quay này giúp bạn tránh được các move B hoặc D, thường chúng không tiện để xoay nhanh hay Finger Trick.</span>
+                            <span class="Part__text">Có 3 trục quay trong toán học, bao gồm: x, y và z. Đó cũng chính là những chữ cái được sử dụng làm kí hiệu Rubik.</span>
+                            <ul class="Basic__list">
+                                <li class="Basic__item"><strong>x: </strong> xoay toàn bộ khối Rubik theo R (mặt R và L giữ đúng vị trí).</li>
+                                <li class="Basic__item"><strong>y: </strong> xoay toàn bộ khối Rubik theo U (mặt U và D giữ đúng vị trí).</li>
+                                <li class="Basic__item"><strong>z: </strong> xoay toàn bộ khối Rubik theo F (mặt F và B giữ đúng vị trí).</li>
+                            </ul>
+                            <span class="Part__img"><img src="/image/Cross/x-y-z.jpg" alt=""></span>
+                        </div>
+                    </div>
+                    <div class="Basic__content">
+                        <h2><mark>Xoay lớp giữa (Slice)</mark></h2>
+                        <div class="Basic__part">
+                            <span class="Part__text">Có 3 lớp giữa khác nhau có trong khối Rubik 3x3, được diễn đạt bằng các chữ cái in hoa sau:</span>
+                            <ul class="Basic__list">
+                                <li class="Basic__item"><strong>M </strong>(Middle): xoay lớp giữa theo L (song song với các mặt R và L)</li>
+                                <li class="Basic__item"><strong>E </strong>(Equator): xoay lớp giữa theo D (song song với các mặt U và D)</li>
+                                <li class="Basic__item"><strong>S </strong>(Side): xoay lớp giữa theo F (song song với các mặt F và B)</li>
+                            </ul>
+                            <span class="Part__img"><img src="/image/Cross/Ki-hieu-M.png" alt=""></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End: Home -->
+
+            <!-- Start: Cross -->
+            <div id="Cross">
+                <div id="Cross__Opposition">
+                    <span class="bigTitle">Cross</span>
+                    <h1 class="text--black">Các Mặt Đối Nhau</h1>
+                    <div class="Basic__content">
+                        <div class="Basic__part Basic__part--row Basic__part--column">
+                            <span class="Part__text Part__text--column">
+                                <span>Viên tâm là ở chính giữa mặt rubik.</span>
+                                <span>Viên cạnh là viên có hai màu.</span>
+                                <span>Viên góc là viên có 3 màu.</span>
+                            </span>
+                            <span class="Part__img"><img src="/image/Cross/rubik-3x3x3.jpg" alt=""></span>
+                        </div>
+                    </div>
+                    <div class="Basic__content">
+                        <h2><mark>Nhớ mặt đối</mark></h2>
+                        <div class="Basic__part Basic__part--row Basic__part--column">
+                            <span class="Part__text Part__text--column">
+                                <span>Đỏ <=> Cam</span>
+                                <span>Xanh lam <=> Xanh lá cây</span>
+                                <span>Trắng <=> Vàng</span>
+                            </span>
+                            <span class="Part__img" style="opacity: .8;"><img src="/image/Cross/nho-he-mau-rubik-de-tao-cross-de-hon.jpg" alt=""></span>
+                        </div>
+                    </div>
+                </div>
+                <div id="Cross__Basic">
+                    <h1 class="text--black">Cross Cơ Bản</h1>
+                    <div class="Basic__content">
+                        <div class="Basic__part style__none">
+                            <span class="Part__text style__none">Chú ý:</span>
+                            <ul class="Basic__list style__none">
+                                <li class="Basic__item style__none">Các công thức trong () có thể xoay nhanh được</li>
+                                <li class="Basic__item style__none">Xoay công thức để mặt F giống trong hình</li>
+                                <li class="Basic__item style__none">Các công thức M, x , y , z , u , Uw ... là <a href="#Advanced">cách xoay nâng cao</a></li>
+                            </ul>
+                        </div>
+                        <ul class="img__list m-top-8 align--center">
+                            <li class="col_8 col-3 img__item">
+                                <img src="/image/Cross/nhom1_1.jpg" alt="" class="img__header">
+                                <div class="img__title">
+                                    <span>F2</span>
+                                </div>
+                            </li>
+                            <li class="col_8 col-3 img__item">
+                                <img src="/image/Cross/nhom1_2.jpg" alt="" class="img__header">
+                                <div class="img__title">
+                                    <span>U ' R ' F R</span>
+                                </div>
+                            </li>
+                            <li class="col_8 col-3 img__item">
+                                <img src="/image/Cross/nhom1_3.jpg" alt="" class="img__header">
+                                <div class="img__title">
+                                    <span>F R2 D2</span>
+                                </div>
+                            </li>
+                            <li class="col_8 col-3 img__item">
+                                <img src="/image/Cross/nhom1_4.jpg" alt="" class="img__header">
+                                <div class="img__title">
+                                    <span>R F L B R D</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- End: Cross -->
+
+           
+
+            <!-- Start: F2L -->
+            <div id="F2L">
+                <span class="bigTitle">41 Công Thức F2L</span>
+                <div id="F2L__Basic">
+                    <h1 class="text">Cơ Bản</h1>
+                    <div class="Basic__content">
+                        <div class="Basic__part style__none">
+                            <span class="Part__text style__none">Chú ý:</span>
+                            <ul class="Basic__list style__none">
+                                <li class="Basic__item style__none">Các công thức trong () có thể xoay nhanh được</li>
+                                <li class="Basic__item style__none">Xoay công thức để mặt F giống trong hình</li>
+                                <li class="Basic__item style__none">Các công thức M, x , y , z , u , Uw ... là <a href="#Advanced">cách xoay nâng cao</a></li>
+                            </ul>
+                        </div>
+                        <ul class="img__list align--center">
+                            <li class="col_8 col-3 img__item item--white">
+                                <img src="/image/F2l/Nhom1_1.png" alt="" class="img__header">
+                                <div class="img__title">
+                                    <span><strong>U (R U' R')</strong></span>
+                                </div>
+                            </li>
+                            <li class="col_8 col-3 img__item item--white">
+                                <img src="/image/F2l/Nhom1_2.png" alt="" class="img__header">
+                                <div class="img__title">
+                                    <span><strong>y' U' (R' U R)</strong></span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div id="F2L__F-of-U">
+                    <h1 class="text">Trước Mặt Tầng Đầu</h1>
+                    <div class="Basic__content">
+                        <ul class="img__list align--center">
+                            <li class="col_8 col-3 img__item item--white">
+                                <img src="/image/F2l/Nhom2_1.png" alt="" class="img__header">
+                                <div class="img__title">
+                                    <span><strong>U' R U R' U2 (R U' R')</strong></span>
+                                </div>
+                            </li>
+                            <li class="col_8 col-3 img__item item--white">
+                                <img src="/image/F2l/Nhom2_2.jpg" alt="" class="img__header">
+                                <div class="img__title">
+                                    <span><strong>U' RU2' R' U2 (RU'R')</strong></span>
+                                </div>
+                            </li>
+                            <li class="col_8 col-3 img__item item--white">
+                                <img src="/image/F2l/Nhom2_3.jpg" alt="" class="img__header">
+                                <div class="img__title">
+                                    <span><strong>y' R' UR U' d' (R U R')</strong></span>
+                                    <span class="null">y L' U L U2 y (R U R')</span>
+                                </div>
+                            </li>
+                            <li class="col_8 col-3 img__item item--white">
+                                <img src="/image/F2l/Nhom2_4.jpg" alt="" class="img__header">
+                                <div class="img__title">
+                                    <span><strong>y' (R' U' R)</strong></span>
+                                </div>
+                            </li>
+                            <li class="col_8 col-3 img__item item--white">
+                                <img src="/image/F2l/Nhom2_5.jpg" alt="" class="img__header">
+                                <div class="img__title">
+                                    <span><strong>d R' U' R U'(R' U' R)</strong></span>
+                                    <span class="null">U' R U' R' d R' U' R</span>
+                                    <span class="null">U' R U' R' U y' R' U' R</span>
+                                </div>
+                            </li>
+                            <li class="col_8 col-3 img__item item--white">
+                                <img src="/image/F2l/Nhom2_6.jpg" alt="" class="img__header">
+                                <div class="img__title">
+                                    <span><strong>U' R U2' R' d (R' U' R)</strong></span>
+                                </div>
+                            </li>
+                            <li class="col_8 col-3 img__item item--white">
+                                <img src="/image/F2l/Nhom2_7.jpg" alt="" class="img__header">
+                                <div class="img__title">
+                                    <span><strong>d R' U R U' (R' U' R)</strong></span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div id="F2L__R-of-U">
+                    <h1 class="text">Bên Phải Tầng Đầu</h1>
+                    <div class="Basic__content">
+                        <ul class="img__list align--center">
+                            <li class="col_8 col-3 img__item item--white">
+                                <img src="/image/F2l/Nhom3_1.jpg" alt="" class="img__header">
+                                <div class="img__title">
+                                    <span><strong>d R' U' R U2' (R' U R)</strong></span>
+                                    <span class="null">y' (U R' U' R)U2(R' U R)  </span>
+                                </div>
+                            </li>
+                            <li class="col_8 col-3 img__item item--white">
+                                <img src="/image/F2l/Nhom3_2.jpg" alt="" class="img__header">
+                                <div class="img__title">
+                                    <span><strong>d R' U2 R U2' (R' U R)</strong></span>
+                                </div>
+                            </li>
+                            <li class="col_8 col-3 img__item item--white">
+                                <img src="/image/F2l/Nhom3_3.jpg" alt="" class="img__header">
+                                <div class="img__title">
+                                    <span><strong>R U' R' U d (R' U' R)</strong></span>
+                                    <span class="null">R U' R' U2 y' (R' U' R)</span>
+                                    <span class="null">(R U' R') U2 (F' U' F)</span>
+                                </div>
+                            </li>
+                            <li class="col_8 col-3 img__item item--white">
+                                <img src="/image/F2l/Nhom3_4.jpg" alt="" class="img__header">
+                                <div class="img__title">
+                                    <span><strong>(R U R')</strong></span>
+                                </div>
+                            </li>
+                            <li class="col_8 col-3 img__item item--white">
+                                <img src="/image/F2l/Nhom3_5.jpg" alt="" class="img__header">
+                                <div class="img__title">
+                                    <span><strong>U' R U R' U (R U R')</strong></span>
+                                </div>
+                            </li>
+                            <li class="col_8 col-3 img__item item--white">
+                                <img src="/image/F2l/Nhom3_6.jpg" alt="" class="img__header">
+                                <div class="img__title">
+                                    <span><strong>R' U2 R2 U R2' U R</strong></span>
+                                    <span class="null">RU' R' URU'R'U2(RU'R')</span>
+                                    <span class="null">d R' U2 R d' (R U R')</span>
+                                </div>
+                            </li>
+                            <li class="col_8 col-3 img__item item--white">
+                                <img src="/image/F2l/Nhom3_7.jpg" alt="" class="img__header">
+                                <div class="img__title">
+                                    <span><strong>U' R U' R' U(R U R')</strong></span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div id="F2L__U-of-U">
+                    <h1 class="text">Bên Trên Tầng Đầu</h1>
+                    <div class="Basic__content">
+                        <ul class="img__list align--center">
+                            <li class="col_8 col-3 img__item item--white">
+                                <img src="/image/F2l/Nhom4_1.jpg" alt="" class="img__header">
+                                <div class="img__title">
+                                    <span><strong>R U2' R' U' (R U R')</strong></span>
+                                </div>
+                            </li>
+                            <li class="col_8 col-3 img__item item--white">
+                                <img src="/image/F2l/Nhom4_2.jpg" alt="" class="img__header">
+                                <div class="img__title">
+                                    <span><strong>y' R' U2 R U (R' U' R)</strong></span>
+                                    <span class="null">y (L' U2 L) U (L' U' L)</span>
+                                </div>
+                            </li>
+                            <li class="col_8 col-3 img__item item--white">
+                                <img src="/image/F2l/Nhom4_3.jpg" alt="" class="img__header">
+                                <div class="img__title">
+                                    <span><strong>U R U2 R' U (R U' R')</strong></span>
+                                    <span class="null">U R U2 R2 F R F'</span>
+                                </div>
+                            </li>
+                            <li class="col_8 col-3 img__item item--white">
+                                <img src="/image/F2l/Nhom4_4.jpg" alt="" class="img__header">
+                                <div class="img__title">
+                                    <span><strong>y' U' R' U2 R U'(R'UR)</strong></span>
+                                </div>
+                            </li>
+                            <li class="col_8 col-3 img__item item--white">
+                                <img src="/image/F2l/Nhom4_5.jpg" alt="" class="img__header">
+                                <div class="img__title">
+                                    <span><strong>U2 R U R' U (R U' R')</strong></span>
+                                    <span class="null">(R U' R') U2' (R U R')</span>
+                                </div>
+                            </li>
+                            <li class="col_8 col-3 img__item item--white">
+                                <img src="/image/F2l/Nhom4_6.jpg" alt="" class="img__header">
+                                <div class="img__title">
+                                    <span><strong>y' U2 R' U' R U' (R'UR)</strong></span>
+                                    <span class="null">y' R' U R U2 (R' U' R)</span>
+                                </div>
+                            </li>
+                            <li class="col_8 col-3 img__item item--white">
+                                <img src="/image/F2l/Nhom4_7.jpg" alt="" class="img__header">
+                                <div class="img__title">
+                                    <span><strong>y'UR'U2RyRU2R'URU'R'</strong></span>
+                                    <span class="null">U2 R2 U2 R' U' R U' R2</span>
+                                    <span class="null">RUR' U2' R U R' U'(RUR')</span>
+                                </div>
+                            </li>
+                            <li class="col_8 col-3 img__item item--white">
+                                <img src="/image/F2l/Nhom4_8.jpg" alt="" class="img__header">
+                                <div class="img__title">
+                                    <span><strong>U'RU2'R'y'R'U2RU'R'UR</strong></span>
+                                    <span class="null">R U R' d R' U R U' (R' U R)</span>
+                                    <span class="null">y' U2 R2 U2 R U R' U R2</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div id="F2L__F-of-u">
+                    <h1 class="text">Trước mặt 2 tầng trên</h1>
+                    <div class="Basic__content">
+                        <ul class="img__list align--center">
+                            <li class="col_8 col-3 img__item item--white">
+                                <img src="/image/F2l/Nhom5_1.jpg" alt="" class="img__header">
+                                <div class="img__title">
+                                    <span><strong>U' R U' R' U2 (R U' R')</strong></span>
+                                    <span class="null">d' L' U' R' U L U' R</span>
+                                </div>
+                            </li>
+                            <li class="col_8 col-3 img__item item--white">
+                                <img src="/image/F2l/Nhom5_2.jpg" alt="" class="img__header">
+                                <div class="img__title">
+                                    <span><strong>U' R U R' d (R' U' R)</strong></span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div id="F2L__R-of-u">
+                    <h1 class="text">Bên phải 2 tầng trên</h1>
+                    <div class="Basic__content">
+                        <ul class="img__list align--center">
+                            <li class="col_8 col-3 img__item item--white">
+                                <img src="/image/F2l/Nhom6_1.jpg" alt="" class="img__header">
+                                <div class="img__title">
+                                    <span><strong>d R' U R U2 (R' U R)</strong></span>
+                                    <span class="null">U' (R U2' R') U (R U R')</span>
+                                    <span class="null">U R U R' U2 (R U R')</span>
+                                </div>
+                            </li>
+                            <li class="col_8 col-3 img__item item--white">
+                                <img src="/image/F2l/Nhom6_2.jpg" alt="" class="img__header">
+                                <div class="img__title">
+                                    <span><strong>d R' U' R d' (R U R')</strong></span>
+                                    <span class="null">y U2 (L' U L) U y (LUL')</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div id="F2L__U-of-u">
+                    <h1 class="text">Bên trên 2 tầng trên</h1>
+                    <div class="Basic__content">
+                        <ul class="img__list align--center">
+                            <li class="col_8 col-3 img__item item--white">
+                                <img src="/image/F2l/Nhom7_1.jpg" alt="" class="img__header">
+                                <div class="img__title">
+                                    <span><strong>R U' R' d (R' U R)</strong></span>
+                                </div>
+                            </li>
+                            <li class="col_8 col-3 img__item item--white">
+                                <img src="/image/F2l/Nhom7_2.jpg" alt="" class="img__header">
+                                <div class="img__title">
+                                    <span><strong>[RUR'U'][RUR'U'](RUR')</strong></span>
+                                    <span class="null">U[RU'R'U][RU'R'U](RU'R')</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div id="F2L__F-of-D">
+                    <h1 class="text">Trước mặt tầng đáy</h1>
+                    <div class="Basic__content">
+                        <ul class="img__list align--center">
+                            <li class="col_8 col-3 img__item item--white">
+                                <img src="/image/F2l/Nhom8_1.jpg" alt="" class="img__header">
+                                <div class="img__title">
+                                    <span><strong>y' R' U' R U (R' U' R)</strong></span>
+                                </div>
+                            </li>
+                            <li class="col_8 col-3 img__item item--white">
+                                <img src="/image/F2l/Nhom8_2.jpg" alt="" class="img__header">
+                                <div class="img__title">
+                                    <span><strong>R U' R' U (R U' R')</strong></span>
+                                </div>
+                            </li>
+                            <li class="col_8 col-3 img__item item--white">
+                                <img src="/image/F2l/Nhom8_3.jpg" alt="" class="img__header">
+                                <div class="img__title">
+                                    <span><strong>RU'R'U'RUR'U2(RU'R')</strong></span>
+                                    <span class="null">y'R'U'RU2R'URU'(R'U'R)</span>
+                                </div>
+                            </li>
+                            <li class="col_8 col-3 img__item item--white">
+                                <img src="/image/F2l/Nhom8_4.jpg" alt="" class="img__header">
+                                <div class="img__title">
+                                    <span><strong>RU'R'dR'U'RU'(R'U'R)</strong></span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div id="F2L__R-of-D">
+                    <h1 class="text">Bên phải tầng đáy</h1>
+                    <div class="Basic__content">
+                        <ul class="img__list align--center">
+                            <li class="col_8 col-3 img__item item--white">
+                                <img src="/image/F2l/Nhom9_1.jpg" alt="" class="img__header">
+                                <div class="img__title">
+                                    <span><strong>R U R' U' (R U R')</strong></span>
+                                </div>
+                            </li>
+                            <li class="col_8 col-3 img__item item--white">
+                                <img src="/image/F2l/Nhom9_2.jpg" alt="" class="img__header">
+                                <div class="img__title">
+                                    <span><strong>y' R' U R U' (R' U R)</strong></span>
+                                    <span class="null">R U R' d (R' U2 R)</span>
+                                </div>
+                            </li>
+                            <li class="col_8 col-3 img__item item--white">
+                                <img src="/image/F2l/Nhom9_3.jpg" alt="" class="img__header">
+                                <div class="img__title">
+                                    <span><strong>R U R' U2 R U' R' U(R U R')</strong></span>
+                                    <span class="null">R U' R' U R U2' R' U (R U' R')</span>
+                                </div>
+                            </li>
+                            <li class="col_8 col-3 img__item item--white">
+                                <img src="/image/F2l/Nhom9_4.jpg" alt="" class="img__header">
+                                <div class="img__title">
+                                    <span><strong>R U R' U' R U' R' U2 y' (R' U' R)</strong></span>
+                                    <span class="null">R U' R' U d R' U' R U' (R' U R)</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div id="F2L__D-of-D">
+                    <h1 class="text">Tầng đáy</h1>
+                    <div class="Basic__content">
+                        <ul class="img__list align--center">
+                            <li class="col_8 col-3 img__item item--white">
+                                <img src="/image/F2l/Nhom10_1.jpg" alt="" class="img__header">
+                                <div class="img__title">
+                                    <span><strong>--U R U' R' d' (L' U L)--</strong></span>
+                                    <span class="null">--U R U' R' U' y (L' U L)--</span>
+                                </div>
+                            </li>
+                            <li class="col_8 col-3 img__item item--white">
+                                <img src="/image/F2l/Nhom10_2.jpg" alt="" class="img__header">
+                                <div class="img__title">
+                                    <span><strong>--y' U' R' U R r' U' R U M'--</strong></span>
+                                    <span class="null">--d' L' U L d (R U' R')--</span>
+                                    <span class="null">--y U' (L' U L) y' U (R U' R')--</span>
+                                </div>
+                            </li>
+                            <li class="col_8 col-3 img__item item--white">
+                                <img src="/image/F2l/Nhom10_3.jpg" alt="" class="img__header">
+                                <div class="img__title">
+                                    <span><strong>--R U' R' U y' R' U2 R U2' (R' U R)--</strong></span>
+                                    <span class="null">--R U' R' d R' U2 R U2' (R' U R)--</span>
+                                    <span class="null">--[R' F R F'] [R U' R' U] [R U' R' U2] (R U' R')--</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- End: F2L -->
+
+
+             <!-- Start: OLL -->
+             <div id="OLL">
+                <span class="bigTitle">52 Công Thức OLL</span>
+                <div id="OLL__Basic">
+                    <h1 class="text--black">4 cạnh vàng</h1>
+                    <div class="Basic__content">
+                        <div class="Basic__part style__none">
+                            <span class="Part__text style__none">Chú ý:</span>
+                            <ul class="Basic__list style__none">
+                                <li class="Basic__item style__none">Đầu tiên bạn cần xoay tầng trên cùng U (hay lớp màu vàng) để mặt trên khớp với một trong 52 trường hợp. Sau đó chỉ cần áp dụng công thức PLL là được.</li>
+                                <li class="Basic__item style__none">Để mặt F là cạnh đáy trong các hình</li>
+                                <li class="Basic__item style__none">Các công thức M, x , y , z , u , Uw ... là <a href="#Advanced">cách xoay nâng cao</a></li>
+                            </ul>
+                        </div>
+                        <ul class="img__list align--center">
+                            <li class="col_8 col-3 img__item">
+                                <img src="/image/OLL/nhom1_1.jpg" alt="" class="img__header">
+                                <div class="img__title">
+                                    <span><strong>(R U R' U) R U2 R'</strong></span>
+                                    <span class="null">y' R' U2 (R U R' U) R</span>
+                                    <span class="null">y L' U2 L U L' U L</span>
+                                </div>
+                            </li>
+                            <li class="col_8 col-3 img__item">
+                                <img src="/image/OLL/nhom1_2.jpg" alt="" class="img__header">
+                                <div class="img__title">
+                                    <span><strong>R' U' R U' R' U2 R</strong></span>
+                                    <span class="null">y R U2 R' U' R U' R'</span>
+                                    <span class="null">y2 (L' U' L U') L' U2 L</span>
+                                </div>
+                            </li>
+                            <li class="col_8 col-3 img__item">
+                                <img src="/image/OLL/nhom1_3.jpg" alt="" class="img__header">
+                                <div class="img__title">
+                                    <span><strong>(r U R' U') (r' F R F')</strong></span>
+                                    <span class="null">y2 l' U' L U R U' r' F</span>
+                                    <span class="null">L F R' F' L' F R F'</span>
+                                </div>
+                            </li>
+                            <li class="col_8 col-3 img__item">
+                                <img src="/image/OLL/nhom1_4.jpg" alt="" class="img__header">
+                                <div class="img__title">
+                                    <span><strong>(R' F R B') (R' F' R B)</strong></span>
+                                    <span class="null">y F' r U R' U' r' F R</span>
+                                    <span class="null">F R' F' r U R U' r'</span>
+                                </div>
+                            </li>
+                            <li class="col_8 col-3 img__item">
+                                <img src="/image/OLL/nhom1_5.jpg" alt="" class="img__header">
+                                <div class="img__title">
+                                    <span><strong>--(R2 D R' U2) (R D' R' U2) R'--</strong></span>
+                                    <span class="null">--(R U R' U) R U2 R2 U' R U' R' U2 R--</span>
+                                    <span class="null">--y2 (R2 D' R U2) (R' D R U2) R--</span>
+                                </div>
+                            </li>
+                            <li class="col_8 col-3 img__item">
+                                <img src="/image/OLL/nhom1_6.jpg" alt="" class="img__header">
+                                <div class="img__title">
+                                    <span><strong>RU2(R2U'R2U'R2)U2R</strong></span>
+                                    <span class="null">fRUR'U'f'(FRUR')U'F'</span>
+                                    <span class="null">R'U2R2UR2UR2U2R'</span>
+                                </div>
+                            </li><li class="col_8 col-3 img__item">
+                                <img src="/image/OLL/nhom1_7.jpg" alt="" class="img__header">
+                                <div class="img__title">
+                                    <span><strong>--(R U R' U) R U' R' U R U2 R'--</strong></span>
+                                    <span class="null">y F (R U R' U')x3 F'</span>
+                                    <span class="null">--y (R U2 R' U') (R U R' U') R U' R'--</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div id="OLL__none">
+                    <h1 class="text--black">Không có cạnh vàng nào</h1>
+                    <div class="Basic__content">
+                        <ul class="img__list align--center">
+                            <li class="col_8 col-3 img__item">
+                                <img src="/image/OLL/nhom2_1.jpg" alt="" class="img__header">
+                                <div class="img__title">
+                                    <span><strong>-R U2 (R2 F R F') U2 (R' F R F')-</strong></span>
+                                    <span class="null">-R U B' R B R2 U' (R' F R F')-</span>
+                                    <span class="null">-y R U' R2 D' r U' r' D R2 U R'-</span>
+                                </div>
+                            </li>
+                            <li class="col_8 col-3 img__item">
+                                <img src="/image/OLL/nhom2_2.jpg" alt="" class="img__header">
+                                <div class="img__title">
+                                    <span><strong>​-y l’ U’ l (U2 L’ U2 L U2) R’ F R-</strong></span>
+                                    <span class="null">-F (R U R' U') F' f (R U R' U') f'-</span>
+                                    <span class="null">-F (R U R' U') S (R U R' U') f'-</span>
+                                </div>
+                            </li>
+                            <li class="col_8 col-3 img__item">
+                                <img src="/image/OLL/nhom2_3.jpg" alt="" class="img__header">
+                                <div class="img__title">
+                                    <span><strong>-y F (U R U' R') F' U F (R U R' U') F'-</strong></span>
+                                    <span class="null">-y' f (R U R' U') f' U' F (R U R' U') F'-</span>
+                                    <span class="null">-r' R2 U R' U r U2 r' U M'-</span>
+                                </div>
+                            </li>
+                            <li class="col_8 col-3 img__item">
+                                <img src="/image/OLL/nhom2_4.jpg" alt="" class="img__header">
+                                <div class="img__title">
+                                    <span><strong>-y' f (R U R' U') f' U F (R U R' U') F'-</strong></span>
+                                    <span class="null">-M U' r U2 r' (U' R U' R') M'-</span>
+                                    <span class="null">-y F’ (U’ L’ U L) F U F (R U R’ U’) F’-</span>
+                                </div>
+                            </li>
+                            <li class="col_8 col-3 img__item">
+                                <img src="/image/OLL/nhom2_5.jpg" alt="" class="img__header">
+                                <div class="img__title">
+                                    <span><strong>-R' U2 F (R U R' U') F2 U2 F R-</strong></span>
+                                    <span class="null">-M U (R U R' U') M' (R' F R F')-</span>
+                                    <span class="null">-r' R U (R U R' U') r (R2 F R F')-</span>
+                                </div>
+                            </li>
+                            <li class="col_8 col-3 img__item">
+                                <img src="/image/OLL/nhom2_6.jpg" alt="" class="img__header">
+                                <div class="img__title">
+                                    <span><strong>-y2 F (R U R' U) y' R' U2 (R' F R F')-</strong></span>
+                                    <span class="null">-(F R’ F’ R) (U R U’ R’) U F (R U R’ U’) F’-</span>
+                                    <span class="null">-r U R' U R U2 r2 (U' R U' R') U2 r-</span>
+                                </div>
+                            </li>
+                            <li class="col_8 col-3 img__item">
+                                <img src="/image/OLL/nhom2_7.jpg" alt="" class="img__header">
+                                <div class="img__title">
+                                    <span><strong>-(R U R’ U) (R’ F R F’) U2 (R’ F R F’)-</strong></span>
+                                    <span class="null">-y2 F R' F' R2 r' U R U' R' U' M'-</span>
+                                    <span class="null">-R' F R U' M' U2 r' U' F' U R-</span>
+                                </div>
+                            </li>
+                            <li class="col_8 col-3 img__item">
+                                <img src="/image/OLL/nhom2_8.jpg" alt="" class="img__header">
+                                <div class="img__title">
+                                    <span><strong>-(M’ U2 M U2) M’ U M (U2 M' U2 M)-</strong></span>
+                                    <span class="null">-r' (R U R U R' U') r2 R2 U R U' r'-</span>
+                                    <span class="null">-M' U M' U M' U M' U' M' U M' U M' U M'-</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div id="OLL__P">
+                    <h1 class="text--black">Chữ P</h1>
+                    <div class="Basic__content">
+                        <ul class="img__list align--center">
+                            <li class="col_8 col-3 img__item">
+                                <img src="/image/OLL/nhom3_1.jpg" alt="" class="img__header">
+                                <div class="img__title">
+                                    <span><strong>-L U F’ (U’ L’ U L) F L’-</strong></span>
+                                    <span class="null">-L d R' d' L' U L F L'-</span>
+                                    <span class="null">-y2 S R U R' U' R' F R f'-</span>
+                                </div>
+                            </li>
+                            <li class="col_8 col-3 img__item">
+                                <img src="/image/OLL/nhom3_2.jpg" alt="" class="img__header">
+                                <div class="img__title">
+                                    <span><strong>​-f' (L' U' L U) f-</strong></span>
+                                    <span class="null">-y2 F' U' L' U L F-</span>
+                                    <span class="null">-y R' U' F' U F R-</span>
+                                </div>
+                            </li>
+                            <li class="col_8 col-3 img__item">
+                                <img src="/image/OLL/nhom3_3.jpg" alt="" class="img__header">
+                                <div class="img__title">
+                                    <span><strong>-R’ U’ F (U R U’ R’) F’ R-</strong></span>
+                                    <span class="null">-y S R U R' U' f' U' F-</span>
+                                    <span class="null">-y2 S' (L' U' L U) L F' L' f-</span>
+                                </div>
+                            </li>
+                            <li class="col_8 col-3 img__item">
+                                <img src="/image/OLL/nhom3_4.jpg" alt="" class="img__header">
+                                <div class="img__title">
+                                    <span><strong>-f (R U R' U') f'-</strong></span>
+                                    <span class="null">-y2 F (U R U' R') F'-</span>
+                                    <span class="null">-R U2 R2 F R F' U' R U' R'-</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div id="OLL__W">
+                    <h1 class="text--black">Chữ W</h1>
+                    <div class="Basic__content">
+                        <ul class="img__list align--center">
+                            <li class="col_8 col-3 img__item">
+                                <img src="/image/OLL/nhom4_1.jpg" alt="" class="img__header">
+                                <div class="img__title">
+                                    <span><strong>-(R’ U’ R U’) (R’ U R U) (R B’ R’ B)-</strong></span>
+                                    <span class="null">-(R' U' R U') (R' U R U) y F R' F' R-</span>
+                                    <span class="null">-y2 L' U' L (U' L' U L) U (L F' L' F)-</span>
+                                </div>
+                            </li>
+                            <li class="col_8 col-3 img__item">
+                                <img src="/image/OLL/nhom4_2.jpg" alt="" class="img__header">
+                                <div class="img__title">
+                                    <span><strong>​-(L U L’ U) (L U’ L’ U’) (L’ B L B’)-</strong></span>
+                                    <span class="null">-(L U L' U) (L U' L' U') y2 R' F R F'-</span>
+                                    <span class="null">-y2 R' U2 r' D' r U2 r' D R r-</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div id="OLL__C">
+                    <h1 class="text--black">Chữ C</h1>
+                    <div class="Basic__content">
+                        <ul class="img__list align--center">
+                            <li class="col_8 col-3 img__item">
+                                <img src="/image/OLL/nhom5_1.jpg" alt="" class="img__header">
+                                <div class="img__title">
+                                    <span><strong>-(R U R’ U’) B’ (R’ F R F’) B-</strong></span>
+                                    <span class="null">-R U R2 U' R' F (R U R U') F'-</span>
+                                    <span class="null">-y2 F (R U R' U') R' F' r U R U' r'-</span>
+                                </div>
+                            </li>
+                            <li class="col_8 col-3 img__item">
+                                <img src="/image/OLL/nhom5_2.jpg" alt="" class="img__header">
+                                <div class="img__title">
+                                    <span><strong>​-R’ U’ (R’ F R F’) U R-</strong></span>
+                                    <span class="null">-y (F R U R') y' R' U R U2 R'-</span>
+                                    <span class="null">-y2 r' F' L' U L U' F r-</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div id="OLL__T">
+                    <h1 class="text--black">Chữ T</h1>
+                    <div class="Basic__content">
+                        <ul class="img__list align--center">
+                            <li class="col_8 col-3 img__item">
+                                <img src="/image/OLL/nhom6_1.jpg" alt="" class="img__header">
+                                <div class="img__title">
+                                    <span><strong>-(R U R' U') (R' F R F')-</strong></span>
+                                    <span class="null">-F R U' R' U R U R' F'-</span>
+                                    <span class="null">-y2 (L' U' L U) (L F' L' F)-</span>
+                                </div>
+                            </li>
+                            <li class="col_8 col-3 img__item">
+                                <img src="/image/OLL/nhom6_2.jpg" alt="" class="img__header">
+                                <div class="img__title">
+                                    <span><strong>​-F (R U R' U') F'-</strong></span>
+                                    <span class="null">-y2 f (U R U' R') f'-</span>
+                                    <span class="null">-y2 F' (L' U' L U) F-</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div id="OLL__I">
+                    <h1 class="text--black">Chữ I</h1>
+                    <div class="Basic__content">
+                        <ul class="img__list align--center">
+                            <li class="col_8 col-3 img__item">
+                                <img src="/image/OLL/nhom7_1.jpg" alt="" class="img__header">
+                                <div class="img__title">
+                                    <span><strong>-F (U R U’ R’)x2 F’-</strong></span>
+                                    <span class="null">-y2 f' (L' U' L U)x2 f-</span>
+                                    <span class="null">-y R' U' (R' F R F') R U' R' U2 R-</span>
+                                </div>
+                            </li>
+                            <li class="col_8 col-3 img__item">
+                                <img src="/image/OLL/nhom7_2.jpg" alt="" class="img__header">
+                                <div class="img__title">
+                                    <span><strong>​-L' B' L U' (R' U R U' R' U) R L' B L-</strong></span>
+                                    <span class="null">-r' U' r (U' R' U R)x2 r' U r-</span>
+                                    <span class="null">-F (R U R' U') R F' (r U R' U') r'-</span>
+                                </div>
+                            </li>
+                            <li class="col_8 col-3 img__item">
+                                <img src="/image/OLL/nhom7_3.jpg" alt="" class="img__header">
+                                <div class="img__title">
+                                    <span><strong>-R U2 R2 (U’ R U’ R’) U2 F R F'-</strong></span>
+                                    <span class="null">-r U2 R2 F R F' U2 (r' F R F')-</span>
+                                    <span class="null">-R U' y R2 D R' U2 R D' R2 d R'-</span>
+                                </div>
+                            </li>
+                            <li class="col_8 col-3 img__item">
+                                <img src="/image/OLL/nhom7_4.jpg" alt="" class="img__header">
+                                <div class="img__title">
+                                    <span><strong>-(R U R’ U) R d’ R U’ R’ F'-</strong></span>
+                                    <span class="null">-(R' U' R U') R' d (R' U R B)-</span>
+                                    <span class="null">-(R U R' U) R U' y R U' R' F'-</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div id="OLL__small-L">
+                    <h1 class="text--black">Chữ L nhỏ</h1>
+                    <div class="Basic__content">
+                        <ul class="img__list align--center">
+                            <li class="col_8 col-3 img__item">
+                                <img src="/image/OLL/nhom8_1.jpg" alt="" class="img__header">
+                                <div class="img__title">
+                                    <span><strong>-F (R U R' U')x2 F'-</strong></span>
+                                    <span class="null">-y2 f (U R U' R')x2 f'-</span>
+                                    <span class="null">-(R U2 R' U') (R U R' U2) (R' F R F')-</span>
+                                </div>
+                            </li>
+                            <li class="col_8 col-3 img__item">
+                                <img src="/image/OLL/nhom8_2.jpg" alt="" class="img__header">
+                                <div class="img__title">
+                                    <span><strong>​-F’ (L' U' L U)x2 F-</strong></span>
+                                    <span class="null">-R' U' (R' F R F')x2 U R-</span>
+                                    <span class="null">-R' U' l' (U R U' R') U R U' x' U R-</span>
+                                </div>
+                            </li>
+                            <li class="col_8 col-3 img__item">
+                                <img src="/image/OLL/nhom8_3.jpg" alt="" class="img__header">
+                                <div class="img__title">
+                                    <span><strong>-r' U r2 U' r2 U' r2 U r'-</strong></span>
+                                    <span class="null">-L’ B L2 F’ L2 B’ L2 F L’-</span>
+                                    <span class="null">-y2 R' F R2 B' R2 F' R2 B R'-</span>
+                                </div>
+                            </li>
+                            <li class="col_8 col-3 img__item">
+                                <img src="/image/OLL/nhom8_4.jpg" alt="" class="img__header">
+                                <div class="img__title">
+                                    <span><strong>-l U' l2 U l2 U l2 U' l-</strong></span>
+                                    <span class="null">-y2 r U' r2 U r2 U r2 U' r-</span>
+                                    <span class="null">-R B' R2 F R2 B R2 F' R-</span>
+                                </div>
+                            </li>
+                            <li class="col_8 col-3 img__item">
+                                <img src="/image/OLL/nhom8_5.jpg" alt="" class="img__header">
+                                <div class="img__title">
+                                    <span><strong>-y r’ U’ r (R' U’ R U)x2 r’ U r-</strong></span>
+                                    <span class="null">-y2 l' U' (L U' L' U) (L U' L' U2) l-</span>
+                                    <span class="null">-y r' U2 (R U R' U') (R U R' U) r-</span>
+                                </div>
+                            </li>
+                            <li class="col_8 col-3 img__item">
+                                <img src="/image/OLL/nhom8_6.jpg" alt="" class="img__header">
+                                <div class="img__title">
+                                    <span><strong>-r U (R' U R U') (R' U R U2) r'-</strong></span>
+                                    <span class="null">-y' r U2 (R' U' R U) (R' U' R U') r'-</span>
+                                    <span class="null">-y' r U r' (R U R' U')x2 r U' r'-</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div id="OLL__big-L">
+                    <h1 class="text--black">Chữ L lớn</h1>
+                    <div class="Basic__content">
+                        <ul class="img__list align--center">
+                            <li class="col_8 col-3 img__item">
+                                <img src="/image/OLL/nhom9_1.jpg" alt="" class="img__header">
+                                <div class="img__title">
+                                    <span><strong>-l’ U l (U l’ U’ l) y L U’ L’-</strong></span>
+                                    <span class="null">-R' (F R U R') F' R F U' F'-</span>
+                                    <span class="null">-r' U r (U r' U' r) y R U' R'-</span>
+                                </div>
+                            </li>
+                            <li class="col_8 col-3 img__item">
+                                <img src="/image/OLL/nhom9_2.jpg" alt="" class="img__header">
+                                <div class="img__title">
+                                    <span><strong>​-r U’ r’ (U’ r U r’) y’ R’ U R-</strong></span>
+                                    <span class="null">-r U' r' (U' r U r') F' U F-</span>
+                                    <span class="null">-F U R U2 (R' U' R U) R' F'-</span>
+                                </div>
+                            </li>
+                            <li class="col_8 col-3 img__item">
+                                <img src="/image/OLL/nhom9_3.jpg" alt="" class="img__header">
+                                <div class="img__title">
+                                    <span><strong>-l U l’ (L U L’ U’) l U’ l’-</strong></span>
+                                    <span class="null">-R B R' (L U L' U') R B' R'-</span>
+                                    <span class="null">-y2 r U r' (R U R' U') r U' r'-</span>
+                                </div>
+                            </li>
+                            <li class="col_8 col-3 img__item">
+                                <img src="/image/OLL/nhom9_4.jpg" alt="" class="img__header">
+                                <div class="img__title">
+                                    <span><strong>-r’ U’ r (R’ U’ R U) r’ U r-</strong></span>
+                                    <span class="null">-L' B' L (R' U' R U) L' B L-</span>
+                                    <span class="null">-y2 l' U' l (L' U' L U) l' U l-</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div id="OLL__Square">
+                    <h1 class="text--black">Hình Vuông</h1>
+                    <div class="Basic__content">
+                        <ul class="img__list align--center">
+                            <li class="col_8 col-3 img__item">
+                                <img src="/image/OLL/nhom10_1.jpg" alt="" class="img__header">
+                                <div class="img__title">
+                                    <span><strong>-r U2 (R' U' R U') r'-</strong></span>
+                                    <span class="null">-y' x' D R2 U' R' U R' D' x-</span>
+                                    <span class="null">-y2 l U2 (L' U' L U') l'-</span>
+                                </div>
+                            </li>
+                            <li class="col_8 col-3 img__item">
+                                <img src="/image/OLL/nhom10_2.jpg" alt="" class="img__header">
+                                <div class="img__title">
+                                    <span><strong>​-r' U2 (R U R' U) r-</strong></span>
+                                    <span class="null">-y2 l' U2 (L U L' U) l-</span>
+                                    <span class="null">-y2 R' F2 r U r' F R-</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div id="OLL__big-Z">
+                    <h1 class="text--black">Tia chớp lớn</h1>
+                    <div class="Basic__content">
+                        <ul class="img__list align--center">
+                            <li class="col_8 col-3 img__item">
+                                <img src="/image/OLL/nhom11_1.jpg" alt="" class="img__header">
+                                <div class="img__title">
+                                    <span><strong>-R’ F (R U R’ U’) F’ U R-</strong></span>
+                                    <span class="null">-R' F (R U R' U') y L' d R-</span>
+                                    <span class="null">-y R r D r' U r D' r' U' R'-</span>
+                                </div>
+                            </li>
+                            <li class="col_8 col-3 img__item">
+                                <img src="/image/OLL/nhom11_2.jpg" alt="" class="img__header">
+                                <div class="img__title">
+                                    <span><strong>​-L F’ (L’ U’ L U) F U’ L’-</strong></span>
+                                    <span class="null">-y2 R U R' F' U' F U R U2 R'-</span>
+                                    <span class="null">-y2 R B' (R' U' R U) B U' R'-</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div id="OLL__small-Z">
+                    <h1 class="text--black">Tia chớp nhỏ</h1>
+                    <div class="Basic__content">
+                        <ul class="img__list align--center">
+                            <li class="col_8 col-3 img__item">
+                                <img src="/image/OLL/nhom12_1.jpg" alt="" class="img__header">
+                                <div class="img__title">
+                                    <span><strong>-L F R' F R F2 L'-</strong></span>
+                                    <span class="null">-r (U R' U R) U2 r'-</span>
+                                    <span class="null">-y2 l U L' U L U2 l'-</span>
+                                </div>
+                            </li>
+                            <li class="col_8 col-3 img__item">
+                                <img src="/image/OLL/nhom12_2.jpg" alt="" class="img__header">
+                                <div class="img__title">
+                                    <span><strong>​-r’ (U’ R U’ R’) U2 r -</strong></span>
+                                    <span class="null">-L' B' L (U' R' U R) L' B L-</span>
+                                    <span class="null">-l' U' L U' L' U2 l-</span>
+                                </div>
+                            </li>
+                            <li class="col_8 col-3 img__item">
+                                <img src="/image/OLL/nhom12_3.jpg" alt="" class="img__header">
+                                <div class="img__title">
+                                    <span><strong>-M (L’ U’ L U’) (L’ U2 L U’) M’-</strong></span>
+                                    <span class="null">-U2 r R2' U' R U' R' U2 R U' M-</span>
+                                    <span class="null">-y' F (R U R' U') F' U F (R U R' U') F'-</span>
+                                </div>
+                            </li>
+                            <li class="col_8 col-3 img__item">
+                                <img src="/image/OLL/nhom12_4.jpg" alt="" class="img__header">
+                                <div class="img__title">
+                                    <span><strong>-M (R U R’ U) (R U2 R’ U) M’-</strong></span>
+                                    <span class="null">-U2 l' L2 U L' U L U2 L' U M-</span>
+                                    <span class="null">-r' R2 (U R' U R) U2 R' U M'-</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div id="OLL__fish">
+                    <h1 class="text--black">Con cá</h1>
+                    <div class="Basic__content">
+                        <ul class="img__list align--center">
+                            <li class="col_8 col-3 img__item">
+                                <img src="/image/OLL/nhom13_1.jpg" alt="" class="img__header">
+                                <div class="img__title">
+                                    <span><strong>-(R U R' U') R' F R2 U R' U' F'-</strong></span>
+                                    <span class="null">-R' U' R y' x' R U' R' (F R U R')-</span>
+                                    <span class="null">-(L' U' L U') (L F' L' F) L' U2 L-</span>
+                                </div>
+                            </li>
+                            <li class="col_8 col-3 img__item">
+                                <img src="/image/OLL/nhom13_2.jpg" alt="" class="img__header">
+                                <div class="img__title">
+                                    <span><strong>​-(R U R' U) (R' F R F') R U2 R'-</strong></span>
+                                    <span class="null">-R U R' y R' F R U' R' F' R-</span>
+                                    <span class="null">-y2 (L' U' L U) L F' L2 U' L U F-</span>
+                                </div>
+                            </li>
+                            <li class="col_8 col-3 img__item">
+                                <img src="/image/OLL/nhom13_3.jpg" alt="" class="img__header">
+                                <div class="img__title">
+                                    <span><strong>-F (R U' R' U') (R U R' F')-</strong></span>
+                                    <span class="null">-F R' F' R (U R U' R')-</span>
+                                    <span class="null">-R' F R F' U' F' U F-</span>
+                                </div>
+                            </li>
+                            <li class="col_8 col-3 img__item">
+                                <img src="/image/OLL/nhom13_4.jpg" alt="" class="img__header">
+                                <div class="img__title">
+                                    <span><strong>-R U2 (R2 F R F') R U2 R'-</strong></span>
+                                    <span class="null">-f (R U R' U') f' (R U R' U) R U2 R'-</span>
+                                    <span class="null">-y' R' U2 R l U' R' U l' U2 R-</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div id="OLL__Z-unusual">
+                    <h1 class="text--black">Chữ Z dị dạng</h1>
+                    <div class="Basic__content">
+                        <ul class="img__list align--center">
+                            <li class="col_8 col-3 img__item">
+                                <img src="/image/OLL/nhom14_1.jpg" alt="" class="img__header">
+                                <div class="img__title">
+                                    <span><strong>-M U (R U R' U') (R' F R F') M'-</strong></span>
+                                    <span class="null">-y (R U R' U') R U' R' F' U' (F R U R')-</span>
+                                    <span class="null">-L2 U' L B L' U L2 U' (r' U' r)-</span>
+                                </div>
+                            </li>
+                            <li class="col_8 col-3 img__item">
+                                <img src="/image/OLL/nhom14_2.jpg" alt="" class="img__header">
+                                <div class="img__title">
+                                    <span><strong>​-M U' (L' U' L U) (L F' L' F) M'-</strong></span>
+                                    <span class="null">-R2' U R' B' R U' R2' U l U l'-</span>
+                                    <span class="null">-R2 U R' B' R U' R2 U R B R'-</span>
+                                </div>
+                            </li>
+                            <li class="col_8 col-3 img__item">
+                                <img src="/image/OLL/nhom14_3.jpg" alt="" class="img__header">
+                                <div class="img__title">
+                                    <span><strong>-R' U' R U' R' U2 R (F R U R' U' F')-</strong></span>
+                                    <span class="null">-M U (F R U R' U' F') M'-</span>
+                                    <span class="null">-L' U L U2 L' U' y' L' U L U F-</span>
+                                </div>
+                            </li>
+                            <li class="col_8 col-3 img__item">
+                                <img src="/image/OLL/nhom14_4.jpg" alt="" class="img__header">
+                                <div class="img__title">
+                                    <span><strong>-(R U' R' U2) R U y R U' R' U' F'-</strong></span>
+                                    <span class="null">-y2 (R U R' U) R U2 R' (F R U R' U' F')-</span>
+                                    <span class="null">-R U' R' U2 R U y R U' R' U' F'-</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div id="OLL__4-yellow">
+                    <h1 class="text--black">4 góc vàng</h1>
+                    <div class="Basic__content">
+                        <ul class="img__list align--center">
+                            <li class="col_8 col-3 img__item">
+                                <img src="/image/OLL/nhom15_1.jpg" alt="" class="img__header">
+                                <div class="img__title">
+                                    <span><strong>-(r U R' U') r' R U R U' R'-</strong></span>
+                                    <span class="null">-y2 M' U M U2 M' U M-</span>
+                                    <span class="null">-M U M' U2 M U M'-</span>
+                                </div>
+                            </li>
+                            <li class="col_8 col-3 img__item">
+                                <img src="/image/OLL/nhom15_2.jpg" alt="" class="img__header">
+                                <div class="img__title">
+                                    <span><strong>​-(R U R' U') M' (U R U' r')-</strong></span>
+                                    <span class="null">-L' (R U R' U') L (R' F R F')-</span>
+                                    <span class="null">-M' U M' U M' U2 M U M U M-</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- End: OLL -->
+
+            <!-- Start: PLL -->
+            <div id="PLL">
+                <span class="bigTitle">21 Công Thức PLL</span>
+                <div id="PLL__Basic">
+                    <h1 class="text">Hoán vị góc</h1>
+                    <div class="Basic__content">
+                        <div class="Basic__part style__none">
+                            <span class="Part__text style__none">Chú ý:</span>
+                            <ul class="Basic__list style__none">
+                                <li class="Basic__item style__none">Đầu tiên bạn cần xoay tầng trên cùng U (hay lớp màu vàng) để mặt trên khớp với một trong 21 trường hợp. Sau đó chỉ cần áp dụng công thức PLL là được.</li>
+                                <li class="Basic__item style__none">Để mặt F là cạnh đáy trong các hình</li>
+                                <li class="Basic__item style__none">Các công thức M, x , y , z , u , Uw ... là <a href="#Advanced">cách xoay nâng cao</a></li>
+                            </ul>
+                        </div>
+                        <ul class="img__list align--center">
+                            <li class="col_8 col-3 img__item item--white">
+                                <img src="/image/PLL/nhom1_1.jpg" alt="" class="img__header">
+                                <div class="img__title">
+                                    <span><strong>-x (R' U R') D2 (R U' R') D2 R2-</strong></span>
+                                    <span class="null">-l' U R' D2 (R U' R') D2 R2-</span>
+                                </div>
+                            </li>
+                            <li class="col_8 col-3 img__item item--white">
+                                <img src="/image/PLL/nhom1_2.jpg" alt="" class="img__header">
+                                <div class="img__title">
+                                    <span><strong>-x' (R U' R) D2 (R' U R) D2 R2-</strong></span>
+                                    <span class="null">-x R D' R U2 R' D R U2 R2-</span>
+                                </div>
+                            </li>
+                            <li class="col_8 col-3 img__item item--white">
+                                <img src="/image/PLL/nhom1_3.jpg" alt="" class="img__header">
+                                <div class="img__title">
+                                    <span><strong>-x'(R U' R' D)R U R' u2(R' U R D)R' U' R-</strong></span>
+                                    <span class="null">-x'(R U' R' D)(R U R' D')(R U R' D)(R U' R' D')-</span>
+                                    <span class="null">-x'(L' U L D')(L' U' L D)(L' U' L D')(L' U L D)-</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div id="PLL__Edges">
+                    <h1 class="text">Hoán vị cạnh</h1>
+                    <div class="Basic__content">
+                        <ul class="img__list align--center">
+                            <li class="col_8 col-3 img__item item--white">
+                                <img src="/image/PLL/nhom2_1.jpg" alt="" class="img__header">
+                                <div class="img__title">
+                                    <span><strong>-(R U' R U) R U (R U' R' U') R2-</strong></span>
+                                    <span class="null">-M2 U (M U2 M') U M2-</span>
+                                    <span class="null">-y2 (R2 U' R' U') R U R U (R U' R)-</span>
+                                </div>
+                            </li>
+                            <li class="col_8 col-3 img__item item--white">
+                                <img src="/image/PLL/nhom2_2.jpg" alt="" class="img__header">
+                                <div class="img__title">
+                                    <span><strong>-R2 U (R U R' U') R' U' (R' U R')-</strong></span>
+                                    <span class="null">-M2 U' (M U2 M') U' M2-</span>
+                                    <span class="null">-y2 (R' U R' U') R' U' (R' U R U) R2-</span>
+                                </div>
+                            </li>
+                            <li class="col_8 col-3 img__item item--white">
+                                <img src="/image/PLL/nhom2_3.jpg" alt="" class="img__header">
+                                <div class="img__title">
+                                    <span><strong>-(M2' U M2' U) M' U2 (M2' U2 M')-</strong></span>
+                                    <span class="null">-y' M' U (M2' U M2') U (M' U2 M2)-</span>
+                                </div>
+                            </li>
+                            <li class="col_8 col-3 img__item item--white">
+                                <img src="/image/PLL/nhom2_4.jpg" alt="" class="img__header">
+                                <div class="img__title">
+                                    <span><strong>-(M2' U M2') U2 (M2' U M2')-</strong></span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div id="PLL__Edges&Corners">
+                    <h1 class="text">Hoán vị cả cạnh và góc</h1>
+                    <div class="Basic__content">
+                        <ul class="img__list align--center">
+                            <li class="col_8 col-3 img__item item--white">
+                                <img src="/image/PLL/nhom3_1.jpg" alt="" class="img__header">
+                                <div class="img__title">
+                                    <span><strong>-(R U R' U') (R' F R2 U') R' U' (R U R' F')-</strong></span>
+                                </div>
+                            </li>
+                            <li class="col_8 col-3 img__item item--white">
+                                <img src="/image/PLL/nhom3_2.jpg" alt="" class="img__header">
+                                <div class="img__title">
+                                    <span><strong>-R' U' F' (R U R' U') (R' F R2 U') (R' U' R U) (R' U R)-</strong></span>
+                                    <span class="null">-y (R' U2 R' U') y (R' F' R2 U') (R' U R' F) R U' F-</span>
+                                </div>
+                            </li>
+                            <li class="col_8 col-3 img__item item--white">
+                                <img src="/image/PLL/nhom3_3.jpg" alt="" class="img__header">
+                                <div class="img__title">
+                                    <span><strong>-(R' U L' U2) (R U' R' U2 R) L U'-</strong></span>
+                                    <span class="null">-y' (L' U' L F) (L' U' L U) L F' L2' U L-</span>
+                                </div>
+                            </li>
+                            <li class="col_8 col-3 img__item item--white">
+                                <img src="/image/PLL/nhom3_4.jpg" alt="" class="img__header">
+                                <div class="img__title">
+                                    <span><strong>-(R U R' F') (R U R' U') R' F R2 U' R' U'-</strong></span>
+                                </div>
+                            </li>
+                            <li class="col_8 col-3 img__item item--white">
+                                <img src="/image/PLL/nhom3_5.jpg" alt="" class="img__header">
+                                <div class="img__title">
+                                    <span><strong>-(R U' R' U') (R U R D) (R' U' R D') (R' U2 R')    -</strong></span>
+                                    <span class="null">-y' (L U2' L' U2') L F' (L' U' L U) L F L2' U-</span>
+                                    <span class="null">-(R U R' F') (R U2' R' U2') (R' F R U) (R U2 R' U')-</span>
+                                </div>
+                            </li>
+                            <li class="col_8 col-3 img__item item--white">
+                                <img src="/image/PLL/nhom3_6.jpg" alt="" class="img__header">
+                                <div class="img__title">
+                                    <span><strong>-(R' U2 R U2') R' F (R U R' U') R' F' R2-</strong></span>
+                                    <span class="null">-(R' U2 R' D') (R U' R' D) (R U R U') (R' U' R U')-</span>
+                                </div>
+                            </li>
+                            <li class="col_8 col-3 img__item item--white">
+                                <img src="/image/PLL/nhom3_7.jpg" alt="" class="img__header">
+                                <div class="img__title">
+                                    <span><strong>-(R' U R' U') y (R' F' R2 U') (R' U R' F) R F-</strong></span>
+                                </div>
+                            </li>
+                            <li class="col_8 col-3 img__item item--white">
+                                <img src="/image/PLL/nhom3_8.jpg" alt="" class="img__header">
+                                <div class="img__title">
+                                    <span><strong>-F (R U' R' U') (R U R' F') (R U R' U') (R' F R F')-</strong></span>
+                                </div>
+                            </li>
+                            <li class="col_8 col-3 img__item item--white">
+                                <img src="/image/PLL/nhom3_9.jpg" alt="" class="img__header">
+                                <div class="img__title">
+                                    <span><strong>-(R U R' U) (R U R' F') (R U R' U') (R' F R2 U') R' U2 (R U' R')-</strong></span>
+                                    <span class="null">-(L U' R U2) L' U R' (L U' R U2) L' U R'-</span>
+                                </div>
+                            </li>
+                            <li class="col_8 col-3 img__item item--white">
+                                <img src="/image/PLL/nhom3_10.jpg" alt="" class="img__header">
+                                <div class="img__title">
+                                    <span><strong>-(R' U R U') (R' F' U' F) (R U R' F) R' F' (R U' R)-</strong></span>
+                                    <span class="null">-(R' U L' U2 R U' L) (R' U L' U2 R U' L)-</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div id="PLL__Cycle-Edges&Corners">
+                    <h1 class="text">Hoán vị chu kỳ cả cạnh và góc</h1>
+                    <div class="Basic__content">
+                        <ul class="img__list align--center">
+                            <li class="col_8 col-3 img__item item--white">
+                                <img src="/image/PLL/nhom4_1.jpg" alt="" class="img__header">
+                                <div class="img__title">
+                                    <span><strong>-R2 U (R' U R' U') (R U' R2) D U' (R' U R D')-</strong></span>
+                                    <span class="null">-R2 u (R' U R' U') R u' R2 y' (R' U R)-</span>
+                                </div>
+                            </li>
+                            <li class="col_8 col-3 img__item item--white">
+                                <img src="/image/PLL/nhom4_2.jpg" alt="" class="img__header">
+                                <div class="img__title">
+                                    <span><strong>-(R' U' R) U D' (R2 U R' U) (R U' R U') R2 D-</strong></span>
+                                    <span class="null">-(R' U' R) y R2 u (R' U R U' R) u' R2-</span>
+                                    <span class="null">-y (F' U' F) (R2 u R' U) (R U' R u') R2-</span>
+                                </div>
+                            </li>
+                            <li class="col_8 col-3 img__item item--white">
+                                <img src="/image/PLL/nhom4_3.jpg" alt="" class="img__header">
+                                <div class="img__title">
+                                    <span><strong>-R2 U' (R U' R U) (R' U R2 D') (U R U' R') D-</strong></span>
+                                    <span class="null">-R2 u' (R U' R U) R' u R2 y (R U' R')-</span>
+                                </div>
+                            </li>
+                            <li class="col_8 col-3 img__item item--white">
+                                <img src="/image/PLL/nhom4_4.jpg" alt="" class="img__header">
+                                <div class="img__title">
+                                    <span><strong>-(R U R') U' D (R2 U' R U') (R' U R' U) R2 D'-</strong></span>
+                                    <span class="null">-(R U R') y' (R2 u' R U') (R' U R' u) R2-</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- End: PLL -->
+
+        </div>
+ 
+        <!-- End: Container -->
+
+    </main>
+    <script src="./assest/js/app.js"></script>
+</body>
+</html>
